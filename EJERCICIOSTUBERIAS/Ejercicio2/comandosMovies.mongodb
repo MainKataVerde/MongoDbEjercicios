@@ -1,5 +1,32 @@
 use('movies')
+/**
+ * Ejercicio II
+Considera la colección movies proporcionada por el profesor. Analiza el siguiente
+output y, haciendo uso de las agregaciones, crea un método en JS que produzca la
+misma salida. [
+{
+"_id": "Thriller",
+"averageRating": 8.5,
+"count": 2
+},
+{
+"_id": "Drama",
+"averageRating": 8.2,
+"count": 1
+},
+{
+"_id": "Action",
+"averageRating": 7.8,
+"count": 1
+},
+{
+"_id": "Comedy",
+"averageRating": 6.5,
+"count": 1
+}
+]
 
+ */
 db.moviesCollection.aggregate([
     {
         $group: {

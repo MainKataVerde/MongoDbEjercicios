@@ -1,5 +1,24 @@
 use('students')
-
+/**
+ * Ejercicio V
+Considera la colección students proporcionada por el profesor. Analiza el siguiente
+output y, haciendo uso de las agregaciones, crea un método en JS que produzca la
+misma salida.
+[
+{
+"_id": "Jane",
+"averageScore": 75
+},
+{
+"_id": "Mike",
+"averageScore": 95
+},
+{
+"_id": "John",
+"averageScore": 85
+}
+]
+ */
 db.studentsCollection.aggregate([
     {
         $unwind: "$scores"

@@ -1,5 +1,24 @@
 use('orders')
-
+/**
+ * Ejercicio I
+Considera la colección orders proporcionada por el profesor. Analiza el siguiente
+output y, haciendo uso de las agregaciones, crea un método en JS que produzca la
+misma salida.
+[
+{
+"_id": "John",
+"totalSales": 35
+},
+{
+"_id": "Alice",
+"totalSales": 70
+},
+{
+"_id": "Bob",
+"totalSales": 30
+}
+]
+ */
 //tenemos que sacar lo que se ha gatado cada uno en una nueva tabla
 db.ordersCollection.aggregate([
     {

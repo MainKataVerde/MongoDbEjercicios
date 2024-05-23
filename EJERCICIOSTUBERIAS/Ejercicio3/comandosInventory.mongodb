@@ -1,3 +1,19 @@
 use('inventory')
+/**
+ * Ejercicio III
+Considera la colección inventory proporcionada por el profesor. Sin hacer uso de las
+agregaciones, muestra el nombre de los productos que tengan al menos una talla S o XL
+disponible. Ejemplo del output que se pide:
+[
+{
+"_id": 1,
+"item": "Product A"
+},
+{
+"_id": 3,
+"item": "Product C"
+}
+]
 
+ */
 db.inventoryCollection.find({sizes : {$in : ["XL" , "S"]}} , { _id : 1 , item : 1})

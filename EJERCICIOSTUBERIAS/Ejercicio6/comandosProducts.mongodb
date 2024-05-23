@@ -1,10 +1,29 @@
 use('products')
-
+/**
+ * Ejercicio VI
+Considera la colección products proporcionada por el profesor. Analiza el siguiente
+output y, haciendo uso de las agregaciones, crea un método en JS que produzca la
+misma salida.
+[
+{
+"_id": "Mike",
+"totalSales": 300
+},
+{
+"_id": "John",
+"totalSales": 250
+},
+{
+"_id": "Jane",
+"totalSales": 200
+}
+]
+ */
 db.productsCollection.aggregate([
-    {
-        $group: {
-          _id: "$customer",
-          "totalSales" : {$sum : "$total_amount"}
-        }
+  {
+    $group: {
+      _id: "$customer",
+      "totalSales": { $sum: "$total_amount" }
     }
-]).sort({totalSales : -1})
+  }
+]).sort({ totalSales: -1 })

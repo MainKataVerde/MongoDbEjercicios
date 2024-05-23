@@ -1,3 +1,8 @@
 use('workers');
-
+/**
+ * Ejercicio VIII
+Considera la colección workers proporcionada por el profesor. Sin hacer uso de las
+agregaciones, selecciona aquellos trabajadores que hayan sido contratados durante el
+año 2021 o 2022 y cuyo salario sea superior a 5500.
+ */
 db.workersCollection.find({$or : [{hired_date : 2021} , {hired_date : 2022}] , salary : {$gt : 5500}})

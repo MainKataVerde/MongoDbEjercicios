@@ -1,3 +1,8 @@
 use('stuffs');
-
+/**
+ * Ejercicio VII
+Considera la colección stuffs proporcionada por el profesor. Sin hacer uso de las
+agregaciones, muestra aquellos productos que pertenecen a la categoría Electronics y
+de los que haya una cantidad superior a 3
+ */
 db.stuffsCollection.find({category : "Electronics" , quantity : {$gt : 3}})

@@ -1,3 +1,8 @@
 use('items')
-
+/**
+ * Ejercicio IV
+Considera la colección items proporcionada por el profesor. Sin hacer uso de las
+agregaciones, selecciona el pedido con el total más alto (no puedes seleccionarlo
+directamente mirando la colección, piensa que podría tener miles de documentos).
+ */
 db.itemsCollection.find({}).sort({total : -1}).limit(1)
