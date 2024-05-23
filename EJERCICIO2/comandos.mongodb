@@ -1,0 +1,13 @@
+use('libros')   
+//todos los que su precio son mayores de 40
+    //db.libros_v1.find({precio : {$gt : 40}})
+//todos los que tienen la cantidad mayor o igual de 50
+    //db.libros_v1.find({cantidad : {$gte : 50}})
+//muestra los libros con la cantidad difrente a 50
+    //db.libros_v1.find({cantidad : {$ne : 50}})
+//muestra todos los libros cuyo precio este entre 20 y 45
+    db.libros_v1.find({$and :
+        [{precio : {$lte : 45}},
+        {precio : {$gte : 20}}]})   
+//muestra todos los libros que pertenezcan a la editorial "Planeta"
+    //db.libros_v1.find({editorial : {$in : ['Planeta']}})

@@ -1,0 +1,13 @@
+use('students')
+
+db.studentsCollection.aggregate([
+    {
+        $unwind: "$scores"
+    },
+    {
+        $group: {
+          _id: "$name",
+          "avarageScore" : {$avg : "$scores"}
+        }
+    }
+])

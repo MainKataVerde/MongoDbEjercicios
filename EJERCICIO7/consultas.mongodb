@@ -1,0 +1,9 @@
+use('series')
+
+// ● Imprimir todos los documentos de la colección series.
+//db.series.find({})
+// ● Imprimir los datos de todas las temporadas de la serie 'The big bang theory'.
+// db.series.find({titulo : 'The big bang theory'}) no se hacerle
+// ● Imprimir los datos de todos los capítulos de la primer temporada de la serie de 'The big bang theory'.
+
+db.series.find({'temporada1.':})

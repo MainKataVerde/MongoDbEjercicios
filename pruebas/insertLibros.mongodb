@@ -1,0 +1,28 @@
+use('biblioteca')
+
+db.inventory.insertMany([
+    {
+        libro : 'El principito',
+        autor : 'El gato de ojalata',
+        precio : 20 ,
+        paginas : 200,
+        lanzamiento : 1980,
+        editorial : 'Planeta'
+    },
+    {
+        libro : 'LMAOOO',
+        autor : 'Oscaro',
+        precio : 10 ,
+        paginas : 100,
+        lanzamiento : 1880,
+        editorial : 'Ohaio'
+    },
+    {
+        libro : 'POGGGGG',
+        autor : 'Kai cenat',
+        precio : 23 ,
+        paginas : 160,
+        lanzamiento : 2020,
+        editorial : 'Twich'
+    }
+])

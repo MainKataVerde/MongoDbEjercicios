@@ -1,0 +1,10 @@
+use('dispositivos');
+
+//te dice cuanstos productos tiene cada fabricante
+db.dispositivos.aggregate([
+    {
+        $group: {
+            _id: "$fabricante",
+            total: { $sum: 1 }
+        }
+    }])

@@ -1,0 +1,5 @@
+use('libros')
+
+//db.libros_v1.find({_id : 1})
+//db.libros_v1.find({precio : 50})
+//db.libros_v1.find({precio : 50 , cantidad : 20})

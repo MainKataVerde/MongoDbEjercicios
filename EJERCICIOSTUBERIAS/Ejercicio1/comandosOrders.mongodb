@@ -1,0 +1,13 @@
+use('orders')
+
+//tenemos que sacar lo que se ha gatado cada uno en una nueva tabla
+db.ordersCollection.aggregate([
+    {
+        $unwind: "$products"//se usa para dividir los array y que se puedan usar para operar
+    },
+    {
+        $group: {
+            _id: "$customer",
+            "totalSales": {$sum : {$multiply: ["$products.price" , "$products.quantity"]}}
+        }
+    }])

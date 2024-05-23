@@ -1,0 +1,62 @@
+use('alumnos')
+//te da la cantidad de alumnos que tienes en este caso
+//db.alumnos.find({}).count()
+
+//solo te va a dar los dos primeros alumnos
+//db.alumnos.find({}).limit(2)
+
+//nos va a sartar los dos primeros alumnos
+//db.alumnos.find({}).skip(2)
+
+//Con este codigo nos va a imprimir todos los elementos de alumno
+/*var cursor = db.alumnos.find({})
+   while (cursor.hasNext()) {
+       printjson(cursor.next())
+   }*/
+
+//asi se accede a un campo especifico dentro del cursor
+/*var cursor = db.alumnos.find({})
+var documento = cursor.next()
+
+print(documento.nombre);*/
+
+//ahora voy a probar con un while , se consigui :)
+/*var cursor = db.alumnos.find({})
+
+while (cursor.hasNext()) {
+    printjson(cursor.next().nombre)
+}*/
+
+//imprimiremos el documento y abajo pondremos los datos que quetamos
+
+/*var cursor = db.alumnos.find({})
+
+while (cursor.hasNext()) {
+    var documento = cursor.next()
+
+    printjson(documento)
+
+    print(documento.nombre + " " + documento.apellido + " vive en " + documento.domicilio)
+}*/
+
+//Imprimir todos los documentos de la colección alumnos
+/*var cursor = db.alumnos.find({})
+printjson(cursor)*/
+
+//Imprimir solo el apellido y la fecha de nacimiento
+/*var cursor = db.alumnos.find({} , {apellido : 0 , domicilio : 0 , _id : 0})
+
+printjson(cursor)*/
+
+//Imprimir todos los datos ordenados por la fecha de nacimiento de mayor a menor.
+/*var cursor = db.alumnos.find({}).sort({fechanacimiento : -1})
+
+printjson(cursor)*/
+
+//Imprimir todos los alumnos que nacieron a partir de 1970
+
+/*var cursor = db.alumnos.find({fechanacimiento : {$gt : new Date (1970 , 1 , 1)}})
+
+printjson(cursor)*/
+
+

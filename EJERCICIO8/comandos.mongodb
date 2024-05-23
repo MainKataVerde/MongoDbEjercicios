@@ -1,0 +1,5 @@
+use('alumnos')
+
+db.alumnos.aggregate([
+    {$match: {nombre : 40}}
+])

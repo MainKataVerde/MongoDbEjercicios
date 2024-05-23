@@ -1,0 +1,10 @@
+use('products')
+
+db.productsCollection.aggregate([
+    {
+        $group: {
+          _id: "$customer",
+          "totalSales" : {$sum : "$total_amount"}
+        }
+    }
+]).sort({totalSales : -1})

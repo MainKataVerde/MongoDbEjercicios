@@ -1,0 +1,22 @@
+use('usuarios')
+
+//solo te enseña los que tengan la edad de 40 años
+//db.usuarios.aggregate([{$match: {edad: 40}}])
+
+//va a ordenar la edad de manera ascendente
+//db.usuarios.aggregate({$sort : {edad : -1}})
+
+//no va a mostrar ni la edad ni el nombre
+//db.usuarios.aggregate([{$project: {edad : 0 , nombre : 0}}])
+
+//nos va a crear un nuevo apartado que va a ser la edad promedio en este caso
+/*db.usuarios.aggregate([{$group: {
+  _id: null,
+  promedioEdad: {$avg : "$edad"}
+}}])*/
+
+//nos va a contar los ususarios que tenemos
+//db.usuarios.count()
+
+//solo nos muestra los que son diferente , si hay 2 con el mismo nombre solo muestra uno
+//db.usuarios.distinct("")

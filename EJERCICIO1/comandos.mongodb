@@ -1,0 +1,7 @@
+use('persona')
+
+db.estudiantes.find({})
+
+db.estudiantes.drop()
+
+db.dropDatabase

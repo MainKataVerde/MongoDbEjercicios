@@ -1,0 +1,31 @@
+use('biblioteca')
+//primera parte es la referencia "Donde ponga esto vamos a cambiar esto a esto" 
+//la segunda parte es lo que queremos cambiar
+db.inventory.updateOne({libro : "El principito"},{ $set : {precio : 22}})
+
+/*ahora haremos lo de arriba pero si no encuentra nada que se parezca a lo que decimos creara
+  un nuevo libro en este caso 
+*/
+
+db.inventory.updateOne({libro : "Viaje al fin del mundo"},{
+
+    $set : {
+        libro : 'Viaje la fin del mundo',
+        autor : 'Henning Mankell',
+        precio : 30 ,
+        paginas : 230,
+        lanzamiento : 2007,
+        editorial : 'Sirual'
+    }
+},
+    {upsert : true}
+)
+/*
+    con esto incrementaremos todos los valores que digamos en el numeoro que pongamos
+    la sintaxis es como las de arriba primera perte donde y la segunda el q 
+    el cambio es q aqui se usa en muchos
+*/
+db.inventory.updateMany({} , {$inc : {precio : 1}})
+
+
+db.inventory.find({})

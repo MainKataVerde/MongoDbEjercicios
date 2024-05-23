@@ -1,0 +1,3 @@
+use('workers');
+
+db.workersCollection.find({$or : [{hired_date : 2021} , {hired_date : 2022}] , salary : {$gt : 5500}})

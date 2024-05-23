@@ -1,0 +1,22 @@
+use('students');
+/**
+ * Ejercicio 5 
+ * Primer filtro : dividimos la array de score para que se pueda utilizar cada valor para calcular
+ * Segundo fultro : Creamos la coleccion nueva en la que se va a calcular el promedio de cada uno
+ * Tercer filtro : Ordenamos de manera ascendente 
+ */
+db.studentsCollection.aggregate([
+    {
+        $unwind: "$scores"
+    },
+    {
+        $group: {
+            _id: "$name",
+            avarageScore: {$avg: "$scores"}
+        }
+    },
+    {
+        $sort: {avarageScore : 1}
+    }
+])
+

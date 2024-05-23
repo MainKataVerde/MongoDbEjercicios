@@ -1,0 +1,3 @@
+use('postes')
+//listame el documento en el que el el primer comentario sea el de pablo
+db.posts.find({'comentarios.0.autor':'Pablo Rodriguez'})

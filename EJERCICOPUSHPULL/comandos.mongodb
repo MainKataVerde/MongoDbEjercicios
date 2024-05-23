@@ -1,0 +1,19 @@
+use('personas')
+
+
+//db.users.updateOne({name : "Alice"} , {$push : {favoriteGames : "Amongon us"}})
+
+//db.users.find({})
+
+//db.users.updateOne({name : "Alice"},{$pull : {favoriteGames : "Fortnite"}})
+
+//db.users.updateOne({name : "Bob" , favoriteGames: "League of Legends" }},{$pull : {favoriteGames: "League of Legends" } , $push : {favoriteGames: "Dota 2"}})
+
+//db.users.updateOne({name : "Charlie"} , {$addToSet : {favoriteGames : {$each : ["Apex Legends" , "La liga de los cohetes"]}}})
+
+//db.users.updateMany({favoriteGames: "Minecraft"} , {$pull : {favoriteGames: "Minecraft"}})
+
+//db.users.updateOne({name : "Charlie"} , {$pull : {favoriteGames : {$in : ["Valorant" , "Counter-Strike"]}}})
+
+db.users.find({})
+

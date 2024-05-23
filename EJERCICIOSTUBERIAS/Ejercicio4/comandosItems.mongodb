@@ -1,0 +1,3 @@
+use('items')
+
+db.itemsCollection.find({}).sort({total : -1}).limit(1)
